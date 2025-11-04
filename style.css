@@ -64,6 +64,7 @@ header {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   width: 100%;
   max-width: 700px;
+   overflow: hidden; /* ✅ impede conteúdo de sair pra fora */
 }
 
 .card h2 {
@@ -117,6 +118,14 @@ header {
   border-radius: 10px;
 }
 
+/* ✅ Garante que embeds (como Instagram) respeitem o tamanho do card */
+.instagram-media {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  border-radius: 10px;
+  display: block !important;
+
 /* Corrige fundo fixo bugado no celular */
 @media (max-width: 768px) {
   body {
@@ -131,3 +140,4 @@ header {
     height: 70px;
   }
 }
+
