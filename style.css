@@ -111,7 +111,7 @@ header {
 
 /* 🔧 Correções de responsividade — sem mudar o estilo */
 iframe {
-  width: 100% !important;
+  width: auto !important;
   height: auto !important;
   border: 0;
 }
@@ -130,3 +130,4 @@ iframe {
     height: 70px;
   }
 }
+
