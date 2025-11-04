@@ -8,7 +8,7 @@
 body {
   font-family: Arial, sans-serif;
   background: #ffce00; /* depois troca pela paleta */
-  background: url('fundoo.png') no-repeat center center fixed;
+  background: url('fundoo.png') no-repeat center center;
   background-size: cover;
   color: #222;
   display: flex;
@@ -27,7 +27,7 @@ body {
 }
 
 .logo {
-  width: 150px;   /* AUMENTADO */
+  width: 150px;
   height: auto;
   animation: zoomIn 1.5s ease-in-out;
 }
@@ -42,7 +42,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 0; /* antes 15px, diminui um pouco */
+  padding: 10px 0;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   z-index: 1000;
 }
@@ -50,7 +50,7 @@ header {
 .logo-topo {
   margin-top: 2px;
   position: sticky;
-  height: 90px;  /* AUMENTADO */
+  height: 90px;
   width: auto;
   border-radius: 20%;
 }
@@ -93,13 +93,6 @@ header {
   background: #1ebc5a;
 }
 
-iframe {
-  width: 100% !important;
-  height: 300px !important;
-  border: 0;
-  border-radius: 10px;
-}
-
 /* Animações */
 @keyframes zoomIn {
   0% { transform: scale(0.7); opacity: 0; }
@@ -116,3 +109,24 @@ iframe {
   display: none;
 }
 
+/* 🔧 Correções de responsividade — sem mudar o estilo */
+iframe {
+  width: 100% !important;
+  height: auto !important;
+  border: 0;
+}
+
+/* Corrige fundo fixo bugado no celular */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .logo-topo {
+    height: 70px;
+  }
+}
