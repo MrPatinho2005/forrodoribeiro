@@ -61,7 +61,7 @@ header {
   border-radius: 16px;
   padding: 16px;
   margin: 30px auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
   width: 100%;
   max-width: 700px;
    overflow: hidden; /* ✅ impede conteúdo de sair pra fora */
@@ -113,7 +113,7 @@ header {
 /* ✅ Corrige apenas o mapa (sem afetar Instagram) */
 .card iframe {
   width: 100% !important;
-  height: 350px !important;
+  height: 600px !important;
   border: 0;
   border-radius: 10px;
 }
@@ -140,4 +140,5 @@ header {
     height: 70px;
   }
 }
+
 
